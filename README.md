@@ -23,6 +23,10 @@ Version 2.0 expands the original 8-bit adder by adding two's complement subtract
 
 ![Version 2.0 schematic](8-Bit-TTL-Adder-Subtractor-V2-Simulation.png)
 
+### Downloadable Multisim Project
+
+[Download the version 2.0 Multisim project](8-Bit_TTL_Adder_Subtractor_V2)
+
 ## Project Overview
 
 I designed, simulated, constructed, and tested an 8-bit binary adder using TTL logic ICs, two 74LS75 latches, two cascaded 74LS83 adders, and an Arduino Uno R4 input interface.
