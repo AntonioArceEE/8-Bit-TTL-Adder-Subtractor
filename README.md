@@ -21,7 +21,7 @@ Version 2.0 expands the original 8-bit adder by adding two's complement subtract
 
 ## Version 2.0 Functional Logic Schematic
 
-![Version 2.0 schematic](8-Bit-TTL-Adder-Subtractor-V2-Simulation)
+![Version 2.0 schematic](8-Bit-TTL-Adder-Subtractor-V2-Simulation.png)
 
 ## Project Overview
 
