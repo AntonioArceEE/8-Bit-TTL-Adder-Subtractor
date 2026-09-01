@@ -3,6 +3,9 @@
 
 Version 2.0 expands the original 8-bit adder by adding two's complement subtraction, Arduino-controlled latching, automated test sequence, and power-rail bypass capacitors.
 
+## Demonstration Video
+
+[Watch the version 2.0 demonstration]
 ## Physical Circuit
 ![Arduino-assisted 8-bit TTL adder/subtractor](Arduino_Assisted_8_Bit_Adder_and_Subtractor_Photo.jpg)
 ## Project Overview
