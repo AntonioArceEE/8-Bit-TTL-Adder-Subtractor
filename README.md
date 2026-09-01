@@ -8,7 +8,7 @@ Version 2.0 expands the original 8-bit adder by adding two's complement subtract
 
 ## Demonstration Video
 
-[Watch the version 2.0 demonstration]
+[Watch the version 2.0 demonstration](https://github.com/AntonioArceEE/8-Bit-TTL-Adder-Subtractor/releases/download/v2.0/Antonio_Arce_8_Bit_Adder_Subtractor_Demonstration.mp4)
 
 
 ## Project Overview
