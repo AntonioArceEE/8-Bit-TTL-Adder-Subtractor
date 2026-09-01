@@ -23,9 +23,9 @@ Version 2.0 expands the original 8-bit adder by adding two's complement subtract
 
 ![Version 2.0 schematic](8-Bit-TTL-Adder-Subtractor-V2-Simulation.png)
 
-### Downloadable Multisim Project
+### Downloadable Multisim File
 
-[Download the version 2.0 Multisim project](8-Bit_TTL_Adder_Subtractor_V2)
+[Download the version 2.0 Multisim project](8-Bit-Adder-MultiSim-Simulation.ms14)
 
 ## Project Overview
 
