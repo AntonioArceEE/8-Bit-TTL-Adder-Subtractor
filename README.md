@@ -3,11 +3,14 @@
 
 Version 2.0 expands the original 8-bit adder by adding two's complement subtraction, Arduino-controlled latching, automated test sequence, and power-rail bypass capacitors.
 
+## Physical Circuit
+![Arduino-assisted 8-bit TTL adder/subtractor](Arduino_Assisted_8_Bit_Adder_and_Subtractor_Photo.jpg)
+
 ## Demonstration Video
 
 [Watch the version 2.0 demonstration]
-## Physical Circuit
-![Arduino-assisted 8-bit TTL adder/subtractor](Arduino_Assisted_8_Bit_Adder_and_Subtractor_Photo.jpg)
+
+
 ## Project Overview
 
 I designed, simulated, constructed, and tested an 8-bit binary adder using TTL logic ICs, two 74LS75 latches, two cascaded 74LS83 adders, and an Arduino Uno R4 input interface.
