@@ -8,7 +8,7 @@ Version 2.0 expands the original 8-bit adder by adding two's complement subtract
 
 ## Demonstration Video
 
-[Watch the version 2.0 demonstration](sha256:7ee3b2a43ba234ec097237ecfc91ba90fd9052d9bf5b9c2b87f9ebe67d3e65ab)
+[Watch the version 2.0 demonstration]
 
 
 ## Project Overview
