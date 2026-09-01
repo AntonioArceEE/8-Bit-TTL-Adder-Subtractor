@@ -10,6 +10,18 @@ Version 2.0 expands the original 8-bit adder by adding two's complement subtract
 
 [Watch the version 2.0 demonstration](https://github.com/AntonioArceEE/8-Bit-TTL-Adder-Subtractor/releases/download/v2.0/Antonio_Arce_8_Bit_Adder_Subtractor_Demonstration.mp4)
 
+## How It Works
+
+- Two 74LS75 ICs store operand A.
+- Two cascaded 74LS83 ICs perform 8-bit arithmetic.
+- Two 74LS86 ICs conditionally invert operand B.
+- ADD/SUB also controls the least-significant caryy-in.
+- Nine LEDs display COUT and S7-S0.
+- The Arduino supplies operands and control signals.
+
+## Version 2.0 Functional Logic Schematic
+
+![Version 2.0 schematic](8-Bit-TTL-Adder-Subtractor-V@-Simulation)
 
 ## Project Overview
 
