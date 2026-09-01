@@ -8,7 +8,7 @@ Version 2.0 expands the original 8-bit adder by adding two's complement subtract
 
 ## Demonstration Video
 
-[Watch the version 2.0 demonstration]
+[Watch the version 2.0 demonstration](Antonio_Arce_8_Bit_Adder_Subtractor_Demonstration.mp4)
 
 
 ## Project Overview
