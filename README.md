@@ -1,4 +1,4 @@
-# Arduino-Assisted 8-Bit Binary Adder
+# Arduino-Assisted 8-Bit TTL Adder/Subtractor
 
 ## Project Overview
 
