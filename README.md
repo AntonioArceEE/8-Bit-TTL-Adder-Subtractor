@@ -3,6 +3,10 @@
 
 Version 2.0 expands the original 8-bit adder by adding two's complement subtraction, Arduino-controlled latching, automated test sequence, and power-rail bypass capacitors.
 
+## Project Overview - Version 2.0
+
+This project is an Arduino-assisted 8-bit TTL circuit that perform binary addition and two's-complement subtraction. Two 74LS75 ICs store operand A, two 74LS86 ICs conditionally invert operand B, and two cascaded 74LS83 ICs perform the arithmetic. The Arduino supplies the operands and the control signals, while the TTL hardware performs the calculations. Eight LEDs display the 8-bit result, and a ninth LED displays carry-out.  
+
 ## Physical Circuit
 ![Arduino-assisted 8-bit TTL adder/subtractor](Arduino_Assisted_8_Bit_Adder_and_Subtractor_Photo.jpg)
 
@@ -21,11 +25,23 @@ Version 2.0 expands the original 8-bit adder by adding two's complement subtract
 
 ## Version 2.0 Functional Logic Schematic
 
+The schematic below represents the functional logic and signal connections of the adder/subtractor. The physical circuit also includes power-rail bypass (decoupling) capacitors to reduce switching noise and improve power stability. These capacitors are omitted from the functional logic schematic for clarity.
+
 ![Version 2.0 schematic](8-Bit-TTL-Adder-Subtractor-V2-Simulation.png)
 
 ### Downloadable Multisim File
 
 [Download the version 2.0 Multisim project](8-Bit_TTL_Adder_Subtractor_V2.ms14)
+
+### Arduino Source Code
+
+The Arduino control code was developed with AI assistance based on circuit architecture, control sequence, and functional requirements I defined. I integrated and tested the code with physical TTL circuit and verified its operation using the documented test cases.
+
+[View the version 2.0 Arduino code]
+
+# Version 1.0 - Original Prototype
+
+The following section documents the original addition-only version of the project.
 
 ## Project Overview
 
