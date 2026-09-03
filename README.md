@@ -37,7 +37,7 @@ The schematic below represents the functional logic and signal connections of th
 
 The Arduino control code was developed with AI assistance based on circuit architecture, control sequence, and functional requirements I defined. I integrated and tested the code with physical TTL circuit and verified its operation using the documented test cases.
 
-[View the version 2.0 Arduino code]
+[View the version 2.0 Arduino code](Arduino_8_Bit_Adder_Subtractor_V2.ino)
 
 # Version 1.0 - Original Prototype
 
