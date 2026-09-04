@@ -5,7 +5,7 @@ Version 2.0 expands the original 8-bit adder by adding two's complement subtract
 
 ## Project Overview - Version 2.0
 
-This project is an Arduino-assisted 8-bit TTL circuit that perform binary addition and two's-complement subtraction. Two 74LS75 ICs store operand A, two 74LS86 ICs conditionally invert operand B, and two cascaded 74LS83 ICs perform the arithmetic. The Arduino supplies the operands and the control signals, while the TTL hardware performs the calculations. Eight LEDs display the 8-bit result, and a ninth LED displays carry-out.  
+This project is an Arduino-assisted 8-bit TTL circuit that performs binary addition and two's-complement subtraction. Two 74LS75 ICs store operand A, two 74LS86 ICs conditionally invert operand B, and two cascaded 74LS83 ICs perform the arithmetic. The Arduino supplies the operands and the control signals, while the TTL hardware performs the calculations. Eight LEDs display the 8-bit result, and a ninth LED displays carry-out.  
 
 ## Physical Circuit
 ![Arduino-assisted 8-bit TTL adder/subtractor](Arduino_Assisted_8_Bit_Adder_and_Subtractor_Photo.jpg)
@@ -19,9 +19,23 @@ This project is an Arduino-assisted 8-bit TTL circuit that perform binary additi
 - Two 74LS75 ICs store operand A.
 - Two cascaded 74LS83 ICs perform 8-bit arithmetic.
 - Two 74LS86 ICs conditionally invert operand B.
-- ADD/SUB also controls the least-significant caryy-in.
+- ADD/SUB also controls the least-significant carry-in.
 - Nine LEDs display COUT and S7-S0.
 - The Arduino supplies operands and control signals.
+
+## Hardware Improvements
+
+Eight 10 uF ceramic bulk power-rail bypass capacitors are distributed across the interconnected 5 V rails, providing approximately 80 uF of total capacitance. Nine 470-ohm current-limiting resistors protect the sum and carry-out LEDs. The LED resistor values were reduced from the earlier design to increase brightness and improve output visibility while maintaining current limiting.
+
+## Version 2.0 Test Results
+
+| Test | Operand A | Operand B | Mode | Expected `COUT S7-S0` | Result |
+| ----: | --------- | --------- | :--: | ---------------------- | :----: |
+| 1 | `00000101` (5) | `00000011` (3) | ADD | `0 00001000` | Passed |
+| 2 | `00001111` (15) | `00000001` (1) | ADD | `0 00010000` | Passed |
+| 3 | `11111111` (255) | `00000001` (1) | ADD | `1 00000000` | Passed |
+| 4 | `00001000` (8) | `00000011` (3) | SUB | `1 00000101` | Passed |
+| 5 | `00000011` (3) | `00000101` (5) | SUB | `0 11111110` | Passed |
 
 ## Version 2.0 Circuit Schematic
 
@@ -35,7 +49,7 @@ The schematic below represents the functional logic and signal connections of th
 
 ### Arduino Source Code
 
-The Arduino control code was developed with AI assistance based on circuit architecture, control sequence, and functional requirements I defined. I integrated and tested the code with physical TTL circuit and verified its operation using the documented test cases.
+The Arduino control code was developed with AI assistance based on the circuit architecture, control sequence, and functional requirements I defined. I integrated and tested the code with physical TTL circuit and verified its operation using the documented test cases.
 
 [View the version 2.0 Arduino code](Arduino_8_Bit_Adder_Subtractor_V2.ino)
 
@@ -55,7 +69,7 @@ The Arduino supplies repeatable 8-bit input patterns, but it does not perform th
 * Store one 8-bit operand using 74LS75 latches.
 * Cascade two 4-bit adders to perform 8-bit arithmetic.
 * Use an Arduino to replace unreliable mechanical DIP switches.
-* Test carry propagation, overflow, and different binary input patterns.
+* Test carry propagation, carry-out, and different binary input patterns.
 * Compare the physical circuit with the Multisim simulation.
 
 ## Components
@@ -177,7 +191,7 @@ These problems helped me practice tracing signals, checking logic levels, verify
 
 I first constructed and verified a smaller 2-bit prototype before scaling the design to eight bits. This reduced debugging complexity and helped confirm the latch and adder connections before completing the larger circuit.
 
-## Future Improvements
+## Version 1.0 Planned Improvements
 
 Possible future improvements include:
 
@@ -187,6 +201,7 @@ Possible future improvements include:
 * Rebuild the circuit on perfboard for stronger mechanical connections.
 * Improve wire organization and signal labeling.
 * Add subtraction or additional logic operations.
+
 ## Video Demonstration
 
 -[Watch or download the 8-bit adder hardware demonstration](https://github.com/AntonioArceEE/8-Bit-Binary-Adder/releases/download/v1.0/Arduino-Assisted.8-Bit.Binary.Adder.mp4)
