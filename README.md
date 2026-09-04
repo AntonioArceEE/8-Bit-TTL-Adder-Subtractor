@@ -23,9 +23,9 @@ This project is an Arduino-assisted 8-bit TTL circuit that perform binary additi
 - Nine LEDs display COUT and S7-S0.
 - The Arduino supplies operands and control signals.
 
-## Version 2.0 Functional Logic Schematic
+## Version 2.0 Circuit Schematic
 
-The schematic below represents the functional logic and signal connections of the adder/subtractor. The physical circuit also includes power-rail bypass (decoupling) capacitors to reduce switching noise and improve power stability. These capacitors are omitted from the functional logic schematic for clarity.
+The schematic below represents the functional logic and signal connections of the adder/subtractor. The Multisim Word Generator serves as the Arduino R4 input-and-control equivalent. Component placement is organized for readability and does not represent the physical breadboard layout.
 
 ![Version 2.0 schematic](8-Bit-TTL-Adder-Subtractor-V2-Simulation.png)
 
