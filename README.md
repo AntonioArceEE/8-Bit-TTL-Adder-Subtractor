@@ -1,7 +1,7 @@
 # Arduino-Assisted 8-Bit TTL Adder/Subtractor
 ## Current Version: 2.0
 
-Version 2.0 expands the original 8-bit adder by adding two's complement subtraction, Arduino-controlled latching, automated test sequence, and power-rail bypass capacitors.
+Version 2.0 expands the original 8-bit adder by adding two's-complement subtraction, Arduino-controlled latching, an automated test sequence, and power-rail bypass capacitors.
 
 ## Project Overview - Version 2.0
 
@@ -29,13 +29,15 @@ Eight 10 uF ceramic bulk power-rail bypass capacitors are distributed across the
 
 ## Version 2.0 Test Results
 
-| Test | Operand A | Operand B | Mode | Expected `COUT S7-S0` | Result |
-| ----: | --------- | --------- | :--: | ---------------------- | :----: |
-| 1 | `00000101` (5) | `00000011` (3) | ADD | `0 00001000` | Passed |
-| 2 | `00001111` (15) | `00000001` (1) | ADD | `0 00010000` | Passed |
-| 3 | `11111111` (255) | `00000001` (1) | ADD | `1 00000000` | Passed |
-| 4 | `00001000` (8) | `00000011` (3) | SUB | `1 00000101` | Passed |
-| 5 | `00000011` (3) | `00000101` (5) | SUB | `0 11111110` | Passed |
+| Test | Operand A | Operand B | Mode | Expected `COUT S7-S0` | Carry/Borrow Interpretation | Result |
+| ----: | --------- | --------- | :--: | ---------------------- | --------------------------- | :----: |
+| 1 | `00000101` (5) | `00000011` (3) | ADD | `0 00001000` | `COUT = 0`: no carry-out | Passed |
+| 2 | `00001111` (15) | `00000001` (1) | ADD | `0 00010000` | `COUT = 0`: no carry-out | Passed |
+| 3 | `11111111` (255) | `00000001` (1) | ADD | `1 00000000` | `COUT = 1`: carry-out | Passed |
+| 4 | `00001000` (8) | `00000011` (3) | SUB | `1 00000101` | `COUT = 1`: no borrow | Passed |
+| 5 | `00000011` (3) | `00000101` (5) | SUB | `0 11111110` | `COUT = 0`: borrow; result is −2 | Passed |
+
+During two's-complement subtraction, `COUT = 1` indicates no unsigned borrow, while `COUT=0` indicates that a borrow occurred. The eight result bits still provide the correct two's-complement result.
 
 ## Version 2.0 Circuit Schematic
 
@@ -49,7 +51,7 @@ The schematic below represents the functional logic and signal connections of th
 
 ### Arduino Source Code
 
-The Arduino control code was developed with AI assistance based on the circuit architecture, control sequence, and functional requirements I defined. I integrated and tested the code with physical TTL circuit and verified its operation using the documented test cases.
+The Arduino control code was developed with AI assistance based on the circuit architecture, control sequence, and functional requirements I defined. I integrated and tested the code with the physical TTL circuit and verified its operation using the documented test cases.
 
 [View the version 2.0 Arduino code](Arduino_8_Bit_Adder_Subtractor_V2.ino)
 
@@ -193,7 +195,7 @@ I first constructed and verified a smaller 2-bit prototype before scaling the de
 
 ## Version 1.0 Planned Improvements
 
-Possible future improvements include:
+At the time, planned improvements included:
 
 * Use the Arduino to control the latch-enable signal automatically.
 * Have the Arduino read and verify the TTL outputs.
@@ -205,5 +207,6 @@ Possible future improvements include:
 ## Video Demonstration
 
 -[Watch or download the 8-bit adder hardware demonstration](https://github.com/AntonioArceEE/8-Bit-Binary-Adder/releases/download/v1.0/Arduino-Assisted.8-Bit.Binary.Adder.mp4)
+
 
 -The video demonstrates the Arduino input interface, TTL hardware, latch operation, shared-bus behavior, sum outputs, carry propagation, and four verified arithmetic tests.
